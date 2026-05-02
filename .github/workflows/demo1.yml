@@ -1,10 +1,21 @@
-name: Hello World
+ame: Hello World
 on: workflow_dispatch
 jobs:
-  hello:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: print hello world
-        run: |
-          echo "hello vcube"
-          echo "hello devops"
+        run: echo " this is build job"
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print hello world
+        run: echo " this is test job"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print hello world
+        run: echo " this is deploy job"
+        
